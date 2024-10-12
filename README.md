@@ -18,7 +18,7 @@ Bu repo, Python öğrenme sürecimde yazdığım kodları ve projeleri içeriyor
 
 1. Bu repoyu klonlayın:
    ```bash
-   git clone https://github.com/kullaniciadiniz/python-ogrenme-seruvenim.git
+   git clone https://github.com/bkn8t/python-ogrenme-seruvenim.git
    ```
 
 2. İlgili Python dosyalarını inceleyebilir ve kendi bilgisayarınızda çalıştırabilirsiniz.
@@ -57,7 +57,7 @@ This repository contains the code and projects I have written while learning Pyt
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/my-python-learning-journey.git
+   git clone https://bkn8t/yourusername/my-python-learning-journey.git
    ```
 
 2. You can explore the Python files and run them on your machine.
