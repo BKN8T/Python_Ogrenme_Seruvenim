@@ -32,13 +32,13 @@ Eğer önerileriniz veya katkıda bulunmak istediğiniz bir kod varsa, pull requ
 ## Lisans
 
 Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasını inceleyebilirsiniz.
-```
+
 
 ---
 
 ### English
 
-```md
+
 # My Python Learning Journey
 
 This repository contains the code and projects I have written while learning Python. My goal is to document my learning process as I explore the fundamentals of Python and share what I've learned.
@@ -71,7 +71,7 @@ If you have any suggestions or would like to contribute, feel free to open a pul
 ## License
 
 This project is licensed under the MIT License. For more information, please check the `LICENSE` file.
-```
+
 
 ### Açıklama:
 - **İçindekiler**: Python öğrenirken hangi konular üzerinde çalıştığını listeledim. Bu bölümü kendi ihtiyaçlarına göre genişletebilirsin.
