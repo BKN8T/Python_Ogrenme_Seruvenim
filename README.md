@@ -7,7 +7,7 @@ Bu repo, Python öğrenme sürecimde yazdığım kodları ve projeleri içeriyor
 ## İçindekiler
 
 - Temel Python Konuları
-  - Değişkenler, veri tipleri, koşullu ifadeler, döngüler
+- Değişkenler, veri tipleri, koşullu ifadeler, döngüler
 - Fonksiyonlar ve Modüller
 - Dosya İşlemleri
 - Hata Yönetimi
@@ -46,7 +46,7 @@ This repository contains the code and projects I have written while learning Pyt
 ## Contents
 
 - Basic Python Concepts
-  - Variables, data types, conditional statements, loops
+- Variables, data types, conditional statements, loops
 - Functions and Modules
 - File Operations
 - Error Handling
