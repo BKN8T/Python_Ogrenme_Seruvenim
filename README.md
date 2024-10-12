@@ -1,6 +1,5 @@
 ### Türkçe
 
-md
 # Python Öğrenme Serüvenim
 
 Bu repo, Python öğrenme sürecimde yazdığım kodları ve projeleri içeriyor. Amacım, Python'un temellerini öğrenirken bu süreci belgelendirmek ve öğrendiklerimi paylaşmak.
