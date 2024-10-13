@@ -9,8 +9,8 @@ while True :
     try: 
         fakINT = int(fak)
         if fakINT < 0:
-            number = fakINT  # Başlangıç değeri
-            result = 1  # Sonucu tutacak değişken
+            number = fakINT  
+            result = 1  
             
 
             while number <= -1:
