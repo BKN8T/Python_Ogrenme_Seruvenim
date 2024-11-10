@@ -55,13 +55,13 @@ def HataKodlari():
 
     # ImportError örneği
     try:
-        import nonexistent_module  # Bu isimde bir modül yok
+        import hatalımodul  # Bu isimde bir modül yok
     except ImportError:
         print("ImportError: Modül bulunamadı!")
 
     # NameError örneği
     try:
-        print(undefined_variable)  # undefined_variable tanımlı değil
+        print(hatalı_degisken)  # undefined_variable tanımlı değil
     except NameError:
         print("NameError: Değişken tanımlı değil!")
 
@@ -71,7 +71,7 @@ def HataKodlari():
     except OverflowError:
         print("OverflowError: Sayısal sonuç aşırı büyük!")
 
-    # MemoryError örneği (bu kod küçük sistemlerde hata verebilir)
+    # MemoryError örneği
     try:
         big_list = [1] * (10**10)  # Çok büyük bir liste oluşturma
     except MemoryError:
