@@ -1,6 +1,6 @@
 import random
 
-# Oyuncu ismini alalım ve başlangıç değerlerini belirleyelim
+
 oyuncuİsimi = input("Lütfen Karakteriniz İçin Bir İsim Giriniz : ")
 
 oyuncuDict = {
@@ -9,16 +9,16 @@ oyuncuDict = {
     "Mutluluk": 50,
     "Açlık": 100,
     "Yemek Sayısı": 4,
-    "Gün": 1  # Gün sayacını başlatıyoruz
+    "Gün": 1 
 }
 
-# Aktivite listeleri
+
 sabah_aktiviteleri = ["kahvaltı yap", "spor yap", "kitap oku", "sosyal medyada gezin", "meditasyon yap", "yürüyüş yap", "yemek ye", "yemek yap"]
 öğle_aktiviteleri = ["öğle yemeği ye", "alışveriş yap", "arkadaşlarınla buluş", "film izle", "çalışma yap"]
 akşam_aktiviteleri = ["akşam yemeği ye", "dinlen", "müzik dinle", "gece yürüyüşü yap", "aile zamanı"]
 
 def aktivite_secim(vakit, aktiviteler):
-    # Aktivite seçeneklerini göster ve seçimi al
+    
     secilen_aktiviteler = random.sample(aktiviteler, 3)
     print(f"\n{vakit} vakti için seçenekleriniz:")
     for i, aktivite in enumerate(secilen_aktiviteler, 1):
@@ -29,7 +29,7 @@ def aktivite_secim(vakit, aktiviteler):
             try:
                 secim = input("Bir aktivite seçin (1, 2 veya 3) ya da çıkmak için 'q' tuşuna basın: ")
                 if secim == 'q':
-                    exit()  # 'q' ile çıkılabilir
+                    exit() 
                 secim = int(secim)
                 if secim in [1, 2, 3]:
                     return secim
@@ -41,7 +41,7 @@ def aktivite_secim(vakit, aktiviteler):
     secim = kullanıcı_secim()
     secilen_aktivite = secilen_aktiviteler[secim - 1]
     
-    # Aktivitelere göre değişiklikler, yemek kontrolü dahil
+
     if secilen_aktivite in ["kahvaltı yap", "öğle yemeği ye", "akşam yemeği ye"]:
         if oyuncuDict["Yemek Sayısı"] <= 0:
             print(f"Yeterli yemeğiniz kalmadı! {secilen_aktivite} işlemini yapamazsınız.")
@@ -73,12 +73,12 @@ def aktivite_secim(vakit, aktiviteler):
         oyuncuDict["Mutluluk"] += 15
         oyuncuDict["Açlık"] -= 20
         print(f"{vakit.capitalize()} yürüyüşü yaptınız. Sağlığınız arttı!")
-    # Diğer aktiviteler burada eklenebilir...
 
-    # Güncel durumu göster
+
+
     print(f"\nGüncel Durum: Sağlık: {oyuncuDict['Sağlık']} | Mutluluk: {oyuncuDict['Mutluluk']} | Açlık: {oyuncuDict['Açlık']} | Yemek Sayısı: {oyuncuDict['Yemek Sayısı']}")
 
-    # Kontrol: Oyunun sona erip ermediği
+
     if oyuncuDict["Sağlık"] <= 0 or oyuncuDict["Mutluluk"] <= 0 or oyuncuDict["Açlık"] <= 0:
         print("Oyun Bitti! Sağlık, mutluluk veya açlık değeriniz sıfır veya altına düştü.")
         exit()
@@ -89,7 +89,7 @@ def gunluk_dongu():
     aktivite_secim("öğle", öğle_aktiviteleri)
     aktivite_secim("akşam", akşam_aktiviteleri)
 
-    # Gün sonunda rapor ve gün artışı
+
     oyuncuDict["Gün"] += 1
     print(f"\nGün {oyuncuDict['Gün'] - 1} tamamlandı. Güncel Durum: Sağlık: {oyuncuDict['Sağlık']} | Mutluluk: {oyuncuDict['Mutluluk']} | Açlık: {oyuncuDict['Açlık']} | Yemek Sayısı: {oyuncuDict['Yemek Sayısı']}")
     print("Bir sonraki güne geçiyorsunuz...\n")
