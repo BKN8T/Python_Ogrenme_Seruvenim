@@ -16,10 +16,15 @@ def receive_messages(client_socket):
 
 def main():
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    host = "127.0.0.1"
+    host = "127.0.0.1"  # Burayı dış ağda çalıştırmak için harici IP'ye çevirebilirsin.
     port = 12345
-    client_socket.connect((host, port))
-    print(f"{host}:{port} adresine bağlanıldı.")
+    
+    try:
+        client_socket.connect((host, port))
+        print(f"{host}:{port} adresine bağlanıldı.")
+    except Exception as e:
+        print(f"Bağlantı hatası: {e}")
+        return
 
     receive_thread = threading.Thread(target=receive_messages, args=(client_socket,))
     receive_thread.start()
@@ -27,11 +32,12 @@ def main():
     while True:
         message = input("Mesaj yaz: ")
         if message.lower() == "exit":
-            client_socket.send(message.encode())
+            client_socket.send(message.encode())  # "exit" mesajını sunucuya gönder
             print("Bağlantı kapatılıyor...")
-            client_socket.close()
-            break
-        client_socket.send(message.encode())
+            client_socket.close()  # Bağlantıyı kapat
+            break  # Döngüyü sonlandır
+        else:
+            client_socket.send(message.encode())  # Normal mesajları gönder
 
 if __name__ == "__main__":
     main()
