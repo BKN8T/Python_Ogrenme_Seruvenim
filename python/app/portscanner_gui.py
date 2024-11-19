@@ -8,53 +8,50 @@ import json
 class PortScannerGUI(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Gelişmiş Port Tarayıcı")
+        self.setWindowTitle("KN8T")
         self.setGeometry(300, 200, 700, 500)
 
-        # Ana widget ve layout
+
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
         self.layout = QVBoxLayout(self.central_widget)
 
-        # Hedef IP giriş kutusu
+
         self.target_label = QLabel("Hedef IP (virgülle ayırarak birden fazla girebilirsiniz):")
         self.layout.addWidget(self.target_label)
         self.target_input = QLineEdit()
         self.layout.addWidget(self.target_input)
 
-        # Port aralığı giriş kutuları
+ 
         self.port_label = QLabel("Port Aralığı (örn: 20-80):")
         self.layout.addWidget(self.port_label)
         self.port_input = QLineEdit()
         self.layout.addWidget(self.port_input)
 
-        # Sonuç ekranı
+
         self.result_box = QTextEdit()
         self.result_box.setReadOnly(True)
         self.layout.addWidget(self.result_box)
 
-        # İlerleme çubuğu
+
         self.progress_bar = QProgressBar()
         self.layout.addWidget(self.progress_bar)
 
-        # Başlat/Durdur butonları
         self.start_button = QPushButton("Taramayı Başlat")
         self.layout.addWidget(self.start_button)
         self.stop_button = QPushButton("Taramayı Durdur")
         self.stop_button.setDisabled(True)
         self.layout.addWidget(self.stop_button)
 
-        # Sonuç kaydetme butonu
+
         self.save_button = QPushButton("Sonuçları Kaydet")
         self.save_button.setDisabled(True)
         self.layout.addWidget(self.save_button)
 
-        # Olaylar
         self.start_button.clicked.connect(self.start_scan)
         self.stop_button.clicked.connect(self.stop_scan)
         self.save_button.clicked.connect(self.save_results)
 
-        # Tarama durum değişkenleri
         self.thread = None
         self.scan_results = []
 
@@ -149,6 +146,10 @@ class PortScanThread(QThread):
                 self.progress_signal.emit(completed_tasks)
 
         self.finished_signal.emit()
+
+
+
+
 
 if __name__ == "__main__":
     import sys
